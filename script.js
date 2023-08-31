@@ -39,8 +39,9 @@ function round(playerSelection, computerSelection) {
 
 let userScore = 0
 let computerScore = 0
+let result = document.querySelector('#result')
+let btns = document.querySelectorAll('button')
 
-
-
-
-game()
+btns.forEach(btn => 
+    btn.addEventListener('click', function() {
+        result.textContent = round(btn.id, getComputerChoice())}))
