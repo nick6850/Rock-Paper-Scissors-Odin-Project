@@ -41,21 +41,6 @@ let userScore = 0
 let computerScore = 0
 
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        let userChoice = prompt('Enter rock, paper or scissors')
-        console.log(round(userChoice, getComputerChoice()))  
-        console.log(`Your score: ${userScore}. Computer score: ${computerScore}`)
-    }
-    if (computerScore > userScore) {
-        console.log(`You lose. Your score: ${userScore}. Computer score: ${computerScore}`)
-    } else if (userScore > computerScore) {
-        console.log(`You won. Your score: ${userScore}. Computer score: ${computerScore}`)
-    } else {
-        console.log(`It's a draw. Your score: ${userScore}. Computer score: ${computerScore}`)
-    }
-   userScore = 0
-   computerScore = 0
-}
+
 
 game()
