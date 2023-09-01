@@ -4,20 +4,28 @@ function getComputerChoice() {
     return options[random_num]
 }
 
+let plrScr = document.querySelector('#plr')
+let cmpScr = document.querySelector('#cmp')
+let userScore = 0
+let computerScore = 0
+
 function round(playerSelection, computerSelection) {
     playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)
     if (playerSelection === 'Rock') {
         if (computerSelection === 'Paper') {
             computerScore += 1
+            cmpScr.textContent = computerScore
             return `You lose! ${computerSelection} beats ${playerSelection}.`
         } else if (computerSelection === 'Scissors'){
             userScore += 1
+            plrScr.textContent = userScore
             return `You win! ${playerSelection} beats ${computerSelection}.`
         } else {
             return `It\'s a draw!`}
     } else if (playerSelection === 'Paper') {
         if (computerSelection === 'Scissors') {
             computerScore += 1
+            cmpScr.textContent = computerScore
             return `You lose! ${computerSelection} beats ${playerSelection}.`
         } else if (computerSelection === 'Rock'){
             userScore += 1
@@ -28,17 +36,20 @@ function round(playerSelection, computerSelection) {
     } else {
         if (computerSelection === 'Rock') {
             computerScore += 1
+            cmpScr.textContent = computerScore
             return `You lose! ${computerSelection} beats ${playerSelection}.`
         } else if (computerSelection === 'Paper'){
             userScore += 1
+            plrScr.textContent = userScore
             return `You win! ${playerSelection} beats ${computerSelection}.`
         } else {
             return `It\'s a draw!`
     }
     }}
 
-let userScore = 0
-let computerScore = 0
+
+
+
 let result = document.querySelector('#result')
 let btns = document.querySelectorAll('button')
 

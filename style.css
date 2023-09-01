@@ -1,13 +1,46 @@
-.btns {
+.container {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vw;
+    background-image: url('background.jpg');
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 
 button {
-    font-size: 80px;
+    font-size: 50px;
+    border-radius: 50px;
+    margin: 30px;
+    padding: 10px;
 }
 
 #result {
     text-align: center;
+    color: wheat;
+    text-shadow: 1px 1px 5px black;
+    padding: 1px;
+}
+
+#plr-scr, #cmp-scr {
+    color: wheat;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 35px;
+    margin: 0;
+}
+
+
+#plr-scr {
+    margin-top: 50px;
+}
+
+#plr, #cmp {
+    font-weight: bold;
 }
